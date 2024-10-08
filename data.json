@@ -1,0 +1,65 @@
+[
+    {
+        "email": "tactical@gmail.com",
+        "first_name": "uuuu",
+        "last_name": "user",
+        "address": "",
+        "dob": "2024-09-27",
+        "password": "$2y$10$M6lPP5DN27Cgy1EBRmbAFOJpBp\/rV8n1g\/8JYO4B3mwnSqs6AQAIu",
+        "ph": "9999999999"
+    },
+    {
+        "email": "kamalthakurkt500@gmail.com",
+        "first_name": "uuuu",
+        "last_name": "user",
+        "address": "",
+        "dob": "1992-09-25",
+        "password": "$2y$10$1PrtscfHLahcAqHaDxsc\/.PwrwBYBR1JnV.aRw1CkqTlNJH.5wa82",
+        "ph": "9999999999"
+    },
+    {
+        "email": "kamalturkt500@gmail.com",
+        "first_name": "uuuu",
+        "last_name": "user",
+        "address": "",
+        "dob": "1992-09-25",
+        "password": "$2y$10$I1owPw4nYsC82XKn.uMmFeqSwTgQ7Dh7BE3pQ019qVJ0BZIl.hTYu",
+        "ph": "9999999999"
+    },
+    {
+        "email": "tacticalurie@gmail.com",
+        "first_name": "user",
+        "last_name": "user",
+        "address": "pathankot",
+        "dob": "1997-09-26",
+        "password": "$2y$10$nrl1CD8oaNyaSP7aYYYlIOXNjYX7NahXK1yG1F2hK6kyAC9qKR2WS",
+        "ph": "9999999999"
+    },
+    {
+        "email": "tacticalur@gmail.com",
+        "first_name": "user",
+        "last_name": "user",
+        "address": "pathankot",
+        "dob": "1997-09-26",
+        "password": "$2y$10$Sv1Yj1hgLo.U.hUfproB4uwqnPwEW7PL64bZ6nIyQxI2a3IEy9VTW",
+        "ph": "9999999999"
+    },
+    {
+        "email": "xyz@gmail.com",
+        "first_name": "admn",
+        "last_name": "user",
+        "address": "dzhf",
+        "dob": "1992-12-28",
+        "password": "$2y$10$tdhrGdRpd6V\/ixwysNMDjOJtOdUSDn9QDyFu.65KsHZw5uXFenTKC",
+        "ph": "9999999999"
+    },
+    {
+        "email": "gym@gmail.com",
+        "first_name": "user",
+        "last_name": "usur",
+        "address": "aa",
+        "dob": "1996-02-27",
+        "password": "$2y$10$dX6IvI.3DTgXemTvKw3eeOlVWxmW\/OnaKbw5\/B6lW0wXbAn6fPv82",
+        "ph": "9999999999"
+    }
+]
