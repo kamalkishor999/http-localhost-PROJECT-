@@ -1,12 +1,18 @@
 <?php
 session_start();
+
+// Prevent caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
+// Check if the user is logged in
 if (!isset($_SESSION['email'])) {
     header("Location: login.php");
-    exit;
+    exit();
 }
 
 $email = $_SESSION['email'];
-
 $servername = "localhost";
 $username = "root"; 
 $password = ""; 
@@ -27,15 +33,7 @@ if ($result->num_rows > 0) {
     echo "User not found.";
     exit;
 }
-
 $stmt->close();
-
-if (isset($_POST['logout'])) {
-    session_destroy();
-    header("Location: login.php");
-    exit;
-}
-
 $conn->close();
 ?>
 <!DOCTYPE html>
@@ -56,12 +54,6 @@ $conn->close();
             color: white;
             padding: 20px;
             text-align: center;
-        }
-        .profile-header h2 {
-            margin: 0;
-        }
-        .profile-header p {
-            margin-top: 5px;
         }
         .user-details {
             background-color: white;
@@ -101,11 +93,11 @@ $conn->close();
         <?php else: ?>
             <p>No user details available.</p>
         <?php endif; ?>
-
+        
         <form method="POST" class="text-center mt-4">
-            <a href="edit.php" class="btn btn-primary">Edit Profile</a>
-            <a href="newpassword.php" class="btn btn-secondary">Change Password</a>
-            <input type="submit" name="logout" value="Logout" class="btn btn-danger">
+            <a href="./edit.php" class="btn btn-primary">Edit Profile</a>
+            <a href="./newpassword.php" class="btn btn-secondary">Change Password</a>
+            <a href="logout.php" class="btn btn-danger">Logout</a>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

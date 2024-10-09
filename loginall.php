@@ -44,47 +44,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .error { color: red; }
-        .contai {
-            background-image: url(./back.jpg);
-            background-repeat: no-repeat;
+        body {
+            background-image: url('./back.jpg');
             background-size: cover;
             background-position: center;
-            padding: 20px;
-            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        .login-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
+            backdrop-filter: blur(5px);
         }
         .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 400px;
-            padding: 20px; 
+        }
+        h2 {
+            color: #333;
+        }
+        .error { 
+            color: red; 
+            font-size: 0.9em; 
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="contai">
+    <div class="login-container">
         <div class="form-container">
-            <h2 class="text-center text-darkslategray mb-4">Login Form</h2>
-            <form method="POST" class="bg-light p-4 rounded shadow">
+            <h2 class="text-center mb-4">Login Form</h2>
+            <form method="POST">
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="xyz@gmail.com" value="<?php echo htmlspecialchars($email ?? ''); ?>" required>
-                    <span class="error text-danger"><?php echo $emailErr; ?></span>
+                    <span class="error"><?php echo $emailErr; ?></span>
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
-                    <span class="error text-danger"><?php echo $passErr; ?></span>
+                    <span class="error"><?php echo $passErr; ?></span>
                 </div>
 
                 <div class="text-center">
-                    <input type="submit" name="submit" value="Login" class="btn btn-primary">
+                    <input type="submit" name="submit" value="Login" class="btn btn-primary btn-block">
                 </div>
-                <div class="text-center mt-4">
-                    <a href="index.php" class="btn btn-primary">BACK</a>
+                <div class="text-center mt-3">
+                    <a href="index.php" class="btn btn-secondary btn-block">BACK</a>
                 </div>
             </form>
         </div>

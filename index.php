@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
-</head>
+</head> 
 <body>
 <nav class="navbar navbar-expand-lg bg-light sticky-top">
     <div class="container-fluid">
@@ -115,17 +115,17 @@
                 </div>
                 <div class="five">
                     <div class="fiveone">
-                        <img src="./images/one.jpg" alt="New Product">
+                        <img src="./images/api.jpg" alt="New Product">
                         <h4>NEW PRODUCTS</h4>
                         <p>Check out our arrivals cater to all your beauty needs.</p>
                     </div>
                     <div class="fivetwo">
-                        <img src="./images/two.jpg" alt="Most Popular">
+                        <img src="./images/bpi.jpg" alt="Most Popular">
                         <h4>MOST POPULAR</h4>
                         <p>Explore the best-selling items loved by our customers.</p>
                     </div>
                     <div class="fivethree">
-                        <img src="./images/three.jpg" alt="Best Value">
+                        <img src="./images/cpi.jpg" alt="Best Value">
                         <h4>BEST VALUE</h4>
                         <p>Get the best quality products at unbeatable prices.</p>
                     </div>
@@ -142,17 +142,17 @@
                 </div>
                 <div class="six">
                     <div class="column">
-                        <img src="./images/four.jpg" alt="Skincare Item 1">
+                        <img src="./images/dpi.jpg" alt="Skincare Item 1">
                         <h3>Moisturizing Cream</h3>
                         <p>Deep hydration for radiant skin. ₹600</p>
                     </div>
                     <div class="column">
-                        <img src="./images/two.jpg" alt="Skincare Item 2">
+                        <img src="./images/epi.jpg" alt="Skincare Item 2">
                         <h3>Sunscreen SPF 50</h3>
                         <p>Protect your skin from harmful UV rays. ₹800</p>
                     </div>
                     <div class="column">
-                        <img src="./images/one.jpg" alt="Skincare Item 3">
+                        <img src="./images/fpi.jpg" alt="Skincare Item 3">
                         <h3>Revitalizing Serum</h3>
                         <p>Restore your skin's natural glow. ₹1,200</p>
                     </div>
@@ -233,7 +233,7 @@
                         <p>We'd love to hear from you!</p>
                         <address>
                             <h5>KAMALKISHOR STORE</h5>
-                            <p>1671, Behind Mandir, Phase -5, Sector 59, Sahibzada Ajit Nagar, Chandigarh.</p>
+                            <p>1687, Behind Mandir, Phase -5, Sector 59, Sahibzada Ajit Nagar, Chandigarh.</p>
                             <i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;&nbsp;<a href="https://mail.google.com/mail/u/0/#inbox?compose=new">kamalkishor999k@gmail.com</a><br>
                             <h4>HOURS:</h4>
                             <p>Open Today 09:00 AM to 05:00 PM.</p>

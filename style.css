@@ -12,6 +12,16 @@ body {
 input.btn.btn-primary {
     margin: 21px 0px 0px 0px;
 }
+.buttonui button {
+    border: none;
+    width: 30%;
+    font-size: 18px;
+}
+
+.sectionthree {
+    padding: 0px;
+    height: 647px;
+}
 a.btn.btn-primary {
     margin: 22px 0px 0px 0px;
 }
@@ -104,13 +114,7 @@ div#sectionfour {
     border: navajowhite;
     font-size: 20px;
 }
-.headingfour h2 {
-    text-align: center;
-    font-size: 40px;
-    margin: 38px 0;
-    color: tomato;
-    font-family: ui-sans-serif;
-}
+
 .button.navbar-toggler{
     font-size: 30px;
 
@@ -131,11 +135,7 @@ a.nav-link:hover {
 html {
     scroll-behavior: smooth;
 }
-.column img {
-    width: 200px;
-    height: 250px;
-    border-radius: 5px;
-}
+
 .fourteenbuy {
     display: flex;             
     justify-content: center;   
@@ -248,9 +248,7 @@ iframe {
     color: inherit;
     font-size: 24px;
 }
-div#sectiontwelve {
-    margin: 15px 0px 0px 0px;
-}
+
 .twelveleft h4 {
     margin: 43px 0px 0px 35px;
 }
@@ -273,9 +271,9 @@ div#sectiontwelve {
 .headingthree {
     text-align: center;
 }
-.sectionthree {
-    padding: 20px;
-    height: 580px;
+div#sectionfour {
+    height: 640px;
+    background-color: #f8f8f8;
 }
 
 .three {
@@ -393,9 +391,7 @@ img#main-image:hover {
     box-shadow: 1px 1px 25px;
 }
 .sectionsix, .sectionseven {
-    padding: 20px;
     background-color: #f8f8f8; 
-    margin: 20px 0; 
 }
 .headingseven p {
     text-align: center;
@@ -481,9 +477,12 @@ background-size: cover;
 .secbutton {
     text-align: center;
 }
-div#sectionfour {
-    height: 581px;
-    background-color: #f8f8f8;
+.headingfour h2 {
+    text-align: center;
+    font-size: 26px;
+    color: tomato;
+    font-family: ui-sans-serif;
+    padding: 29px 0px 21px 0px;
 }
 .bgnine {
     background-image: url(./images/nailnew);
@@ -491,13 +490,17 @@ div#sectionfour {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.bgeleven h1 {
-    margin: 40px 135px;
-    font-size: 43px;
-    font-family: auto;
+.sectionsix, .sectionseven {
+    background-color: #f8f8f8;
+    padding: 36px 0px;
 }
 button.btn.btn-sm.btn-outline-secondary {
     background: none;
+}
+.column img {
+    width: 174px;
+    height: 250px;
+    border-radius: 5px;
 }
 .sectionten {
     width: 100%;
@@ -514,7 +517,7 @@ button.btn.btn-sm.btn-outline-secondary {
     background-size: cover;
     background-repeat: no-repeat;
     height: 441px;
-    width: 1477px;}
+    max-width: 1477px;}
 
 
 
@@ -553,10 +556,7 @@ button.btn.btn-sm.btn-outline-secondary {
     float: right;
 }
 
-.bgeleven {
-    padding: 132px 168px 0px 133px;
-    color: white;
-}
+
 .circle h2, button {
     margin: 29px 0px 0px 0px;
 }
@@ -578,8 +578,7 @@ a {
 .sectionthirteen {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    width: 100%;
+        width: 100%;
 }
 .footer {
     background-color: black;
@@ -590,15 +589,21 @@ a {
     color: white;
     margin-left: 10px;
 }
-
-
-
 .sectionthirteen {
-    padding: 40px 20px; 
-    background-color: #f9f9f9; 
-    text-align: center; 
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 63px 0px 0px 0px;
 }
-
+.bgeleven {
+    padding: 132px 168px 0px 133px;
+    color: white;
+    width: 100%;
+}
+.bgeleven h1 {
+    margin: 40px 235px;
+    font-size: 26px;
+    font-family: auto;
+}
 .bgthirteen {
     margin: 0 auto; 
     max-width: 400px; 

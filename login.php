@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $servername = "localhost";
 $username = "root"; 
 $password = ""; 
@@ -63,7 +62,6 @@ $conn->close();
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
-
     <style>
         .error { color: red; }
         .contai {
@@ -79,11 +77,8 @@ $conn->close();
         }
         .form-container {
             width: 100%;
-            max-width: 400px;
+            max-width: 400px; 
             padding: 20px; 
-        }
-        .col-form-label {
-            white-space: nowrap; 
         }
     </style>
 </head>
@@ -94,16 +89,14 @@ $conn->close();
             <form method="POST" class="bg-light p-4 rounded shadow">
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="xyz@gmail.com" value="<?php echo htmlspecialchars($email ?? ''); ?>" required>
-                    <span class="error text-danger"><?php echo $emailErr; ?></span>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="xyz@gmail.com" required>
+                    <span class="error"><?php echo $emailErr; ?></span>
                 </div>
-
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
-                    <span class="error text-danger"><?php echo $passErr; ?></span>
+                    <span class="error"><?php echo $passErr; ?></span>
                 </div>
-
                 <div class="text-center">
                     <input type="submit" name="submit" value="Login" class="btn btn-primary">
                     <a href="contact.php" class="btn btn-primary">Sign Up</a>
@@ -111,7 +104,6 @@ $conn->close();
             </form>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
