@@ -9,16 +9,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
 $emailErr = $oldPassErr = $newPassErr = "";
 $isValid = true;
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
-    $email = $_SESSION['email']; // Get logged-in user's email
+    $email = $_SESSION['email']; 
     $oldPassword = $_POST['old_password'];
     $newPassword = $_POST['new_password'];
-
-    // Validate old password
     $stmt = $conn->prepare("SELECT password FROM data WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -37,8 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         $isValid = false;
     }
     $stmt->close();
-
-    // If old password is valid, update the new password
     if ($isValid) {
         $stmt = $conn->prepare("UPDATE data SET password = ? WHERE email = ?");
         $stmt->bind_param("ss", $newPassword, $email);
@@ -47,10 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         echo "<script>alert('Password changed successfully!'); window.location.href='login.php';</script>";
     }
 }
-
 $conn->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

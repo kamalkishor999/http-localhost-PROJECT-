@@ -266,7 +266,7 @@
             <div class="fourteen">
                 <h3>FACIAL</h3>
                 <p>1hr | ₹ <?php echo(rand(1000,3000));?></p>
-                <a href="./contact.php">
+                <a href="./book.php">
                 <button>Book</button>
             </a>
             </div>
