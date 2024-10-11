@@ -99,45 +99,51 @@ $conn->close();
         <h3 class="text-center my-4">Featured Makeup Products</h3>
 
         <div class="row" id="products">
-            <div class="col-md-4">
-                <div class="product-card" onclick="selectProduct('Glamorous Foundation', 'A lightweight foundation that provides full coverage and a natural finish.', '30.00')">
-                    <h5>Glamorous Foundation</h5>
-                    <p>A lightweight foundation that provides full coverage and a natural finish.</p>
-                    <p><strong>Price:</strong> $30.00</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-card" onclick="selectProduct('Vibrant Lipstick', 'Long-lasting lipstick with a creamy texture and intense color.', '20.00')">
-                    <h5>Vibrant Lipstick</h5>
-                    <p>Long-lasting lipstick with a creamy texture and intense color.</p>
-                    <p><strong>Price:</strong> $20.00</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-card" onclick="selectProduct('Radiant Blush', 'A silky blush that gives your cheeks a healthy glow.', '15.00')">
-                    <h5>Radiant Blush</h5>
-                    <p>A silky blush that gives your cheeks a healthy glow.</p>
-                    <p><strong>Price:</strong> $15.00</p>
-                </div>
-            </div>
+        <div class="col-md-4">
+    <div class="product-card" onclick="selectProduct('Glamorous Foundation', 'A lightweight foundation that provides full coverage and a natural finish.', '30.00')">
+        <div class="text-center">
+            <img src="images/cpi.jpg" alt="Glamorous Foundation" class="img-fluid mb-2" style="max-height: 100px; border-radius: 4px;">
         </div>
-
+        <h5>Glamorous Foundation</h5>
+        <p>A lightweight foundation that provides full coverage and a natural finish.</p>
+        <p><strong>Price:</strong> $30.00</p>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="product-card" onclick="selectProduct('Vibrant Lipstick', 'Long-lasting lipstick with a creamy texture and intense color.', '20.00')">
+        <div class="text-center">
+            <img src="images/epi.jpg" alt="Vibrant Lipstick" class="img-fluid mb-2" style="max-height: 100px; border-radius: 4px;">
+        </div>
+        <h5>Vibrant Lipstick</h5>
+        <p>Long-lasting lipstick with a creamy texture and intense color.</p>
+        <p><strong>Price:</strong> $20.00</p>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="product-card" onclick="selectProduct('Radiant Blush', 'A silky blush that gives your cheeks a healthy glow.', '15.00')">
+        <div class="text-center">
+            <img src="images/dpi.jpg" alt="Radiant Blush" class="img-fluid mb-2" style="max-height: 100px; border-radius: 4px;">
+        </div>
+        <h5>Radiant Blush</h5>
+        <p>A silky blush that gives your cheeks a healthy glow.</p>
+        <p><strong>Price:</strong> $15.00</p>
+    </div>
+</div>
+    </div>
         <h2 class="text-center my-4">Booking Details</h2>
         <div class="form-container">
             <form id="bookingForm" method="POST">
                 <input type="hidden" name="product_name" id="product_name">
                 <input type="hidden" name="product_description" id="product_description">
-                <input type="hidden" name="product_price" id="product_price">
-                
+                <input type="hidden" name="product_price" id="product_price">   
                 <div class="form-group">
-                    <label>Selected Product:</label>
-                    <p id="product_name_display" class="form-control-plaintext"></p>
-                </div>
-                <div class="form-group">
-                    <label>Product Price:</label>
-                    <p id="product_price_display" class="form-control-plaintext"></p>
-                </div>
-                
+    <label>Selected Product:</label>
+    <input type="text" class="form-control" id="product_name_display" name="product_name_display" readonly>
+</div>
+<div class="form-group">
+    <label>Product Price:</label>
+    <input type="text" class="form-control" id="product_price_display" name="product_price_display" readonly>
+</div>  
                 <div class="form-group">
                     <label for="first_name">First Name:</label>
                     <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
@@ -157,15 +163,14 @@ $conn->close();
         </div>
     </div>
     <script>
-        function selectProduct(name, description, price) {
-            document.getElementById('product_name').value = name;
-            document.getElementById('product_description').value = description;
-            document.getElementById('product_price').value = price;
-            document.getElementById('product_name_display').innerText = name;
-            document.getElementById('product_price_display').innerText = price;
-
-            alert(`Selected Product: ${name}`);
-        }
+       function selectProduct(name, description, price) {
+    document.getElementById('product_name').value = name;
+    document.getElementById('product_description').value = description;
+    document.getElementById('product_price').value = price;
+    document.getElementById('product_name_display').value = name; 
+    document.getElementById('product_price_display').value = price; 
+    alert(`Selected Product: ${name}`);
+}
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

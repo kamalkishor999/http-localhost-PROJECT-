@@ -4,13 +4,10 @@ $servername = "localhost";
 $username = "root"; 
 $password = ""; 
 $dbname = "formdata";
-
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-// Fetch all bookings
 $sql = "SELECT * FROM bookings";
 $result = $conn->query($sql);
 ?>
@@ -79,7 +76,6 @@ $result = $conn->query($sql);
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
 <?php
 $conn->close();
 ?>
