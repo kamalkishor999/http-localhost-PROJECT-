@@ -61,7 +61,7 @@ if ($result->num_rows > 0) {
                         <th>Booking Date</th>
                         <th>Action</th>
                     </tr>
-                </thead>
+                </thead> 
                 <tbody>
                     <?php if ($result->num_rows > 0): ?>
                         <?php
