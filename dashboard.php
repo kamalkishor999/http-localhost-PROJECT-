@@ -8,17 +8,15 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT * FROM bookings ORDER BY booking_date DESC"; // Fetching bookings ordered by date
+$sql = "SELECT * FROM bookings ORDER BY booking_date DESC"; 
 $result = $conn->query($sql);
 
-// Determine the latest product
 $latestProductId = null;
 if ($result->num_rows > 0) {
-    $latestProduct = $result->fetch_assoc(); // Get the latest product
-    $latestProductId = $latestProduct['id']; // Assuming 'id' is the unique identifier
+    $latestProduct = $result->fetch_assoc(); 
+    $latestProductId = $latestProduct['id']; 
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,8 +39,8 @@ if ($result->num_rows > 0) {
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         .latest-product {
-            background-color: #f8e6b8; /* Light yellow background for the latest product */
-            border: 2px solid #ffcc00; /* Gold border */
+            background-color: #f8e6b8; 
+            border: 2px solid #ffcc00; 
         }
     </style>
 </head>
@@ -65,11 +63,10 @@ if ($result->num_rows > 0) {
                 <tbody>
                     <?php if ($result->num_rows > 0): ?>
                         <?php
-                        // Reset pointer to the start of the result set
                         $result->data_seek(0);
                         while ($row = $result->fetch_assoc()):
                         ?>
-                            <tr <?php if ($row['id'] == $latestProductId) echo 'class="latest-product"'; ?>> <!-- Highlight latest product -->
+                            <tr <?php if ($row['id'] == $latestProductId) echo 'class="latest-product"'; ?>> 
                                 <td><?php echo htmlspecialchars($row['first_name']); ?></td>
                                 <td><?php echo htmlspecialchars($row['email']); ?></td>
                                 <td><?php echo htmlspecialchars($row['product_name']); ?></td>
@@ -78,10 +75,10 @@ if ($result->num_rows > 0) {
                                 <td><?php echo htmlspecialchars($row['booking_date']); ?></td>
                                 <td>
                                     <form action="pay.php" method="post">
-                                        <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($row['id']); ?>"> <!-- Assuming 'id' is the unique identifier -->
+                                        <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($row['id']); ?>">
                                         <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($row['product_name']); ?>">
                                         <input type="hidden" name="product_price" value="<?php echo htmlspecialchars($row['product_price']); ?>">
-                                        <input type="hidden" name="email" value="<?php echo htmlspecialchars($row['email']); ?>"> <!-- Include email -->
+                                        <input type="hidden" name="email" value="<?php echo htmlspecialchars($row['email']); ?>"> 
                                         <button type="submit" class="btn btn-primary">Buy</button>
                                     </form>
                                 </td>

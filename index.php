@@ -39,7 +39,7 @@
             <div class="bg">
                 <div class="circle">
                     <h2>ENHANCE YOUR NATURAL BEAUTY</h2>
-                    <button><a href="#sectionfive">EXPLORE NOW</button> </a>
+                    <button><a href="./book.php">EXPLORE NOW</button> </a>
                 </div>
             </div>
         </div>
