@@ -9,3 +9,5 @@ function showAlert() {
     alert("Thanks to Subscribe Kamalkishor Store!");
     return false; 
 }
+const stripe = Stripe('pk_test_51OyUMHSBMjjIWhVuN8BJtkbwC9ZqOVRN6GCKCOix3JqAdqHK8mHMcZddNEbN5GxIaSe4uIIVQ0vzxcSnb5MEnJTg00cMZopyo5pk_test_51OyUMHSBMjjIWhVuN8BJtkbwC9ZqOVRN6GCKCOix3JqAdqHK8mHMcZddNEbN5GxIaSe4uIIVQ0vzxcSnb5MEnJTg00cMZopyo5'); // Replace with your Stripe public key
+
