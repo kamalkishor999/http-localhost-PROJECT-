@@ -102,7 +102,7 @@ $conn->close();
                     <input type="submit" name="submit" value="Change Password" class="btn btn-primary btn-block">
                 </div>
                 <div class="text-center mt-3">
-                    <a href="index.php" class="btn btn-secondary btn-block">Back</a>
+                    <a href="logindetails.php" class="btn btn-secondary btn-block">Back</a>
                 </div>
             </form>
         </div>
