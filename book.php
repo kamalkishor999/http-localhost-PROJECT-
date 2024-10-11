@@ -9,9 +9,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-$message = ""; // Initialize the message variable
-
+$message = ""; 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['email'], $_POST['first_name'], $_POST['password'], $_POST['product_name'], $_POST['product_description'], $_POST['product_price'])) {
         $email = $_POST['email'];
@@ -38,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $message = "Failed to book product. Please try again.";
             }
         } else {
-            $message = "Not Registered,You need to register firstly";
+            $message = "Not Registered, You need to register firstly";
         }
 
         $stmt->close();
@@ -130,6 +128,16 @@ $conn->close();
                 <input type="hidden" name="product_name" id="product_name">
                 <input type="hidden" name="product_description" id="product_description">
                 <input type="hidden" name="product_price" id="product_price">
+                
+                <div class="form-group">
+                    <label>Selected Product:</label>
+                    <p id="product_name_display" class="form-control-plaintext"></p>
+                </div>
+                <div class="form-group">
+                    <label>Product Price:</label>
+                    <p id="product_price_display" class="form-control-plaintext"></p>
+                </div>
+                
                 <div class="form-group">
                     <label for="first_name">First Name:</label>
                     <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
@@ -153,6 +161,8 @@ $conn->close();
             document.getElementById('product_name').value = name;
             document.getElementById('product_description').value = description;
             document.getElementById('product_price').value = price;
+            document.getElementById('product_name_display').innerText = name;
+            document.getElementById('product_price_display').innerText = price;
 
             alert(`Selected Product: ${name}`);
         }

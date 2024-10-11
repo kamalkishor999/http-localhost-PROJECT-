@@ -264,7 +264,7 @@
                 <h1>ONLINE APPOINTMENT</h1>
             </div>
             <div class="fourteen">
-                <h3>FACIAL</h3>
+                <h3>FASHION HUB</h3>
                 <p>1hr | ₹ <?php echo(rand(1000,3000));?></p>
                 <a href="./book.php">
                 <button>Book</button>
